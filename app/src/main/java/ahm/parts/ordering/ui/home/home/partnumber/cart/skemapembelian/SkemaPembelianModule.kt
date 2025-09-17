@@ -13,3 +13,5 @@ abstract class SkemaPembelianModule {
     @ViewModelKey(SkemaPembelianViewModel::class)
     abstract fun bindViewModel(skemaPembelianViewModel: SkemaPembelianViewModel): ViewModel
 }
+
+

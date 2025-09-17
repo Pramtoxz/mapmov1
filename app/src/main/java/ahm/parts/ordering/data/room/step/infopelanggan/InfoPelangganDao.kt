@@ -17,3 +17,5 @@ interface InfoPelangganDao {
     @Query("SELECT * from info_pelanggan WHERE idUser = 1 LIMIT 1")
     fun getInfoPelanggan(): LiveData<InfoPelanggan?>
 }
+
+

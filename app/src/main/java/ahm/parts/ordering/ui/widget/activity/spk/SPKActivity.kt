@@ -1,3 +1,4 @@
+private lateinit var binding: ActivitySpkBinding
 package ahm.parts.ordering.ui.widget.activity.spk
 
 import ahm.parts.ordering.R
@@ -8,7 +9,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.widget.SearchView
-import kotlinx.android.synthetic.main.activity_spk.*
 
 class SPKActivity : BaseActivity<SPKViewModel>() {
 
@@ -20,7 +20,8 @@ class SPKActivity : BaseActivity<SPKViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_spk)
+        binding = ActivitySpkBinding.inflate(layoutInflater)
+    setContentView(binding.root)
         setToolbar(getString(R.string.toolbar_spk), true)
 
         populateData()
@@ -79,3 +80,6 @@ class SPKActivity : BaseActivity<SPKViewModel>() {
         return super.onOptionsItemSelected(item)
     }
 }
+
+
+

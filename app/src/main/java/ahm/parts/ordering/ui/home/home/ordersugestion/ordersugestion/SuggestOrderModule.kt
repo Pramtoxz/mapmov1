@@ -13,3 +13,5 @@ abstract class SuggestOrderModule {
     @ViewModelKey(SuggestOrderViewModel::class)
     abstract fun bindViewModel(suggestOrderViewModel: SuggestOrderViewModel): ViewModel
 }
+
+

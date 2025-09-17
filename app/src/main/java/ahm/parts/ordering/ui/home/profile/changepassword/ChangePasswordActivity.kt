@@ -1,3 +1,5 @@
+private lateinit var binding: DialogBottomAlertForgotBinding
+private lateinit var binding: ActivityChangePasswordBinding
 package ahm.parts.ordering.ui.home.profile.changepassword
 
 import ahm.parts.ordering.R
@@ -14,7 +16,6 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_change_password.*
 
 /**
  * class ini mengandung interaksi UI dengan layout activity_change_password.xml
@@ -24,7 +25,8 @@ class ChangePasswordActivity : BaseActivity<ProfileViewModel>(), View.OnClickLis
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_change_password)
+        binding = ActivityChangePasswordBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -128,3 +130,6 @@ class ChangePasswordActivity : BaseActivity<ProfileViewModel>(), View.OnClickLis
     }
 
 }
+
+
+

@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityPartNumberDetailBinding
 package ahm.parts.ordering.ui.home.home.partnumber.detail
 
 import ahm.parts.ordering.R
@@ -9,15 +10,14 @@ import ahm.parts.ordering.ui.base.BaseActivity
 import ahm.parts.ordering.ui.home.HomeViewModel
 import android.os.Bundle
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_part_number_detail.*
-import kotlinx.android.synthetic.main.item_type_motor_part_detail.view.*
 import java.util.ArrayList
 
 class PartNumberDetailActivity : BaseActivity<HomeViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_part_number_detail)
+        binding = ActivityPartNumberDetailBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
 
@@ -73,3 +73,6 @@ class PartNumberDetailActivity : BaseActivity<HomeViewModel>() {
     }
 
 }
+
+
+

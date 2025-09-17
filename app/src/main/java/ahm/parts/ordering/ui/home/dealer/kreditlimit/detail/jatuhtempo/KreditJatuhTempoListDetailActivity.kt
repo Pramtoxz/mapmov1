@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityKreditLimitDetailListBinding
 package ahm.parts.ordering.ui.home.dealer.kreditlimit.detail.jatuhtempo
 
 import ahm.parts.ordering.R
@@ -13,7 +14,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_kredit_limit_detail_list.*
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -26,7 +26,8 @@ class KreditJatuhTempoListDetailActivity : BaseActivity<KreditLimitViewModel>(),
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kredit_limit_detail_list)
+        binding = ActivityKreditLimitDetailListBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         dealerKredit = extra(Constants.BUNDLE.KODEDEALER)
 
@@ -86,3 +87,6 @@ class KreditJatuhTempoListDetailActivity : BaseActivity<KreditLimitViewModel>(),
     }
 
 }
+
+
+

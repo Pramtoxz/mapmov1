@@ -1,3 +1,5 @@
+private var _binding:  = null
+private val binding get() = _binding!!
 package ahm.parts.ordering.ui.widget.activity
 
 import ahm.parts.ordering.R
@@ -14,7 +16,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.fragment_sales_activity.*
 
 class SalesActivityFragment : BaseFragment<HomeViewModel>() {
 
@@ -31,7 +32,8 @@ class SalesActivityFragment : BaseFragment<HomeViewModel>() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sales_activity, container, false)
+        return _binding = FragmentSalesActivityBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -139,3 +141,11 @@ class SalesActivityFragment : BaseFragment<HomeViewModel>() {
         super.onResume()
     }
 }
+
+
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }

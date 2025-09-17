@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityRealisasiVisitMultipleSelectBinding
 package ahm.parts.ordering.ui.home.dealer.salesmanvisit.efektivitas
 
 import ahm.parts.ordering.R
@@ -21,7 +22,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_realisasi_visit_multiple_select.*
 import org.json.JSONArray
 import org.json.JSONObject
 import java.lang.Exception
@@ -44,7 +44,8 @@ class EfektivitasActivity : BaseActivity<EfektivitasViewModel>(), View.OnClickLi
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_realisasi_visit_multiple_select)
+        binding = ActivityRealisasiVisitMultipleSelectBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -338,3 +339,6 @@ class EfektivitasActivity : BaseActivity<EfektivitasViewModel>(), View.OnClickLi
         return arrays
     }
 }
+
+
+

@@ -1,3 +1,5 @@
+private var _binding:  = null
+private val binding get() = _binding!!
 package ahm.parts.ordering.ui.home.home.dashboard.salesman
 
 import ahm.parts.ordering.R
@@ -19,9 +21,6 @@ import android.view.ViewGroup
 import androidx.core.app.ActivityOptionsCompat
 import androidx.core.util.Pair
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.fragment_salesman.*
-import kotlinx.android.synthetic.main.item_home_leaderboard.view.*
-import kotlinx.android.synthetic.main.content_loading_list.*
 import org.jetbrains.anko.backgroundDrawable
 import java.lang.Exception
 
@@ -38,7 +37,8 @@ class SalesmanFragment : BaseFragment<HomeViewModel>(), View.OnClickListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_salesman, container, false)
+        return _binding = FragmentSalesmanBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -218,3 +218,11 @@ class SalesmanFragment : BaseFragment<HomeViewModel>(), View.OnClickListener {
 
 
 }
+
+
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }

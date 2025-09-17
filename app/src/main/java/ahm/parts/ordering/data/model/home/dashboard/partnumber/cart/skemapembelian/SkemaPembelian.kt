@@ -105,3 +105,5 @@ data class ListSkemaPembelian(
     @Expose
     var qty: String = ""
 )
+
+

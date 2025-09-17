@@ -1,3 +1,5 @@
+private lateinit var binding: DialogBottomEditQuantityBinding
+private lateinit var binding: ActivityCartBinding
 package ahm.parts.ordering.ui.home.home.partnumber.cart
 
 import ahm.parts.ordering.R
@@ -23,9 +25,6 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_cart.*
-import kotlinx.android.synthetic.main.bottom_sheet_history_detail.*
-import kotlinx.android.synthetic.main.item_cart.view.*
 
 class CartActivity : BaseActivity<CartViewModel>(), View.OnClickListener {
 
@@ -40,7 +39,8 @@ class CartActivity : BaseActivity<CartViewModel>(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cart)
+        binding = ActivityCartBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         dialogHelper = DialogHelper(this,true)
 
@@ -272,3 +272,6 @@ class CartActivity : BaseActivity<CartViewModel>(), View.OnClickListener {
 //        }
 
 }
+
+
+

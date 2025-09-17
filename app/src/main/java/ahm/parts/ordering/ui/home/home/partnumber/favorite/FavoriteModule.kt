@@ -13,3 +13,5 @@ abstract class FavoriteModule {
     @ViewModelKey(FavoriteViewModel::class)
     abstract fun bindViewModel(favoriteViewModel: FavoriteViewModel): ViewModel
 }
+
+

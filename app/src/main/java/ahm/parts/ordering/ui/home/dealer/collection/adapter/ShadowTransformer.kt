@@ -92,3 +92,6 @@ class ShadowTransformer(private val viewPager: ViewPager, private val cardAdapte
 
     override fun onPageScrollStateChanged(state: Int) {}
 }
+
+
+

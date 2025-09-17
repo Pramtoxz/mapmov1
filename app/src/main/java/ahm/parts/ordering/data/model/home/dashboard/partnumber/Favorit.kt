@@ -62,3 +62,6 @@ data class Favorit(
     @Expose
     var typeMotor: List<TypeMotorX> = listOf()
 )
+
+
+

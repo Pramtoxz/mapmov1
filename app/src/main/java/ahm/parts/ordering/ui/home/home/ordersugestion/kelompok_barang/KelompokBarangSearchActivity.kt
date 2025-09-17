@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityKelompokBarangSearchStockBinding
 package ahm.parts.ordering.ui.home.home.ordersugestion.kelompok_barang
 
 import ahm.parts.ordering.R
@@ -5,15 +6,13 @@ import ahm.parts.ordering.helper.setAdapter
 import ahm.parts.ordering.ui.base.BaseActivity
 import ahm.parts.ordering.ui.home.HomeViewModel
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_kelompok_barang_search_stock.*
-import kotlinx.android.synthetic.main.item_content_kelompok_barang_search.view.*
-import kotlinx.android.synthetic.main.item_header_kelompok_barang_search.view.*
 
 class KelompokBarangSearchActivity : BaseActivity<HomeViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kelompok_barang_search_stock)
+        binding = ActivityKelompokBarangSearchStockBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -66,3 +65,6 @@ class KelompokBarangSearchActivity : BaseActivity<HomeViewModel>() {
 
 
 }
+
+
+

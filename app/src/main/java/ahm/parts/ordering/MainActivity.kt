@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityHomeBinding
 package ahm.parts.ordering
 
 import ahm.parts.ordering.R
@@ -10,7 +11,8 @@ class MainActivity : BaseActivity<HomeViewModel>(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -32,3 +34,6 @@ class MainActivity : BaseActivity<HomeViewModel>(), View.OnClickListener {
     }
 
 }
+
+
+

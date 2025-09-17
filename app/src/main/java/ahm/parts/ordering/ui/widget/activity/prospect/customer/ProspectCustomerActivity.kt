@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityProspectCustomerBinding
 package ahm.parts.ordering.ui.widget.activity.prospect.customer
 
 import ahm.parts.ordering.R
@@ -9,6 +10,10 @@ class ProspectCustomerActivity : BaseActivity<ProspectViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_prospect_customer)
+        binding = ActivityProspectCustomerBinding.inflate(layoutInflater)
+    setContentView(binding.root)
     }
 }
+
+
+

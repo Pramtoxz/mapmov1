@@ -17,3 +17,5 @@ data class CheckoutDashboard(
     @SerializedName("distance")
     var distance: Int = 0
 )
+
+

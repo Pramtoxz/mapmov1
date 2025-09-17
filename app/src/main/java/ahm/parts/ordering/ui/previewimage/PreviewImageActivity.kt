@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityPreviewImageBinding
 package ahm.parts.ordering.ui.previewimage
 
 import ahm.parts.ordering.R
@@ -9,13 +10,13 @@ import ahm.parts.ordering.ui.base.BaseActivity
 import ahm.parts.ordering.ui.home.HomeViewModel
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_preview_image.*
 
 class PreviewImageActivity : BaseActivity<HomeViewModel>(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_preview_image)
+        binding = ActivityPreviewImageBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -41,3 +42,6 @@ class PreviewImageActivity : BaseActivity<HomeViewModel>(), View.OnClickListener
     }
 
 }
+
+
+

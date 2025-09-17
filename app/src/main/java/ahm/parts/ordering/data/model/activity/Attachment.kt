@@ -10,3 +10,5 @@ open class Attachment {
     var fileName = ""
     var path = ""
 }
+
+

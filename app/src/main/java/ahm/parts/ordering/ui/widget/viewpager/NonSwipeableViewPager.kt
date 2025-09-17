@@ -50,3 +50,5 @@ class NonSwipeableViewPager : ViewPager {
         }
     }
 }
+
+

@@ -1,3 +1,5 @@
+private lateinit var binding: DialogBottomAlertForgotBinding
+private lateinit var binding: ActivityForgotPasswordBinding
 package ahm.parts.ordering.ui.auth.forgotpassword
 
 import ahm.parts.ordering.R
@@ -11,7 +13,6 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_forgot_password.*
 
 /**
  * class ini mengandung interaksi UI dengan layout activity_forgot_password.xml
@@ -21,7 +22,8 @@ class ForgotPasswordActivity : BaseActivity<ForgotPasswordViewModel>(), View.OnC
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_forgot_password)
+        binding = ActivityForgotPasswordBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -100,3 +102,6 @@ class ForgotPasswordActivity : BaseActivity<ForgotPasswordViewModel>(), View.OnC
     }
 
 }
+
+
+

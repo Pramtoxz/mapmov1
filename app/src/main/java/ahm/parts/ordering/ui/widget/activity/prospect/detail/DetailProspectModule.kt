@@ -13,3 +13,5 @@ abstract class DetailProspectModule {
     @ViewModelKey(DetailProspectViewModel::class)
     abstract fun bindViewModel(detailProspectViewModel: DetailProspectViewModel): ViewModel
 }
+
+

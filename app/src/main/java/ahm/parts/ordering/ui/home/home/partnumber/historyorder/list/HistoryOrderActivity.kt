@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityPartNumberHistoryOrderBinding
 package ahm.parts.ordering.ui.home.home.partnumber.historyorder.list
 
 import ahm.parts.ordering.R
@@ -7,7 +8,6 @@ import ahm.parts.ordering.ui.base.adapter.RecyclerAdapter
 import ahm.parts.ordering.ui.home.HomeViewModel
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_part_number_history_order.*
 
 class HistoryOrderActivity : BaseActivity<HomeViewModel>(), View.OnClickListener {
 
@@ -16,7 +16,8 @@ class HistoryOrderActivity : BaseActivity<HomeViewModel>(), View.OnClickListener
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_part_number_history_order)
+        binding = ActivityPartNumberHistoryOrderBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -64,3 +65,6 @@ class HistoryOrderActivity : BaseActivity<HomeViewModel>(), View.OnClickListener
     }
 
 }
+
+
+

@@ -13,3 +13,5 @@ data class DashboardSales(
     @SerializedName("tunai")
     var tunai: Int = 0
 )
+
+

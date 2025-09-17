@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityPartNumberSearchBinding
 package ahm.parts.ordering.ui.home.home.ordersugestion.partsearch
 
 import ahm.parts.ordering.R
@@ -20,7 +21,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_part_number_search.*
 
 class PartNumberSearchActivity : BaseActivity<SearchPartViewModel>(), View.OnClickListener {
 
@@ -30,7 +30,8 @@ class PartNumberSearchActivity : BaseActivity<SearchPartViewModel>(), View.OnCli
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_part_number_search)
+        binding = ActivityPartNumberSearchBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         dealerSelected = extra(Constants.BUNDLE.JSON).getObject()
 
@@ -158,3 +159,6 @@ class PartNumberSearchActivity : BaseActivity<SearchPartViewModel>(), View.OnCli
 
 
 }
+
+
+

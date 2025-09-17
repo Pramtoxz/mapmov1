@@ -13,3 +13,5 @@ data class Prospek(
     @SerializedName("target")
     var target: Int = 0
 )
+
+

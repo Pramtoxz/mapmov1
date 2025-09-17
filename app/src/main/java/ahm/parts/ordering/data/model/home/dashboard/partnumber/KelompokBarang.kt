@@ -30,3 +30,6 @@ data class AllKelompokBarang(
     var code: String = ""
 )
 
+
+
+

@@ -16,3 +16,5 @@ class InfoPelangganRepository(private val dao: InfoPelangganDao) {
         dao.deleteInfoPelanggan()
     }
 }
+
+

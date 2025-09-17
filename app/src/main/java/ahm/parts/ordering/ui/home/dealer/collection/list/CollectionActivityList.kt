@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityCollectionListBinding
 package ahm.parts.ordering.ui.home.dealer.collection.list
 
 import ahm.parts.ordering.R
@@ -22,9 +23,6 @@ import androidx.core.view.ViewCompat
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.viewpager.widget.ViewPager
-import kotlinx.android.synthetic.main.activity_collection_list.*
-import kotlinx.android.synthetic.main.item_collection_list.*
-import kotlinx.android.synthetic.main.item_collection_list.view.*
 import kotlin.collections.ArrayList
 
 class CollectionActivityList : BaseActivity<CollectionViewModel>(), ClickPrevention{
@@ -43,7 +41,8 @@ class CollectionActivityList : BaseActivity<CollectionViewModel>(), ClickPrevent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_collection_list)
+        binding = ActivityCollectionListBinding.inflate(layoutInflater)
+    setContentView(binding.root)
         paramCollection = extra(Constants.BUNDLE.PARAM).getObject()
         initUI()
         initListener()
@@ -185,3 +184,6 @@ class CollectionActivityList : BaseActivity<CollectionViewModel>(), ClickPrevent
 //        }
 //    }
 }
+
+
+

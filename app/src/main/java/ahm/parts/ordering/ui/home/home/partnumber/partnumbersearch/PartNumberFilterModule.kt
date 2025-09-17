@@ -13,3 +13,5 @@ abstract class PartNumberFilterModule {
     @ViewModelKey(PartNumberFilterViewModel::class)
     abstract fun bindViewModel(kelompokBarangViewModel: PartNumberFilterViewModel): ViewModel
 }
+
+

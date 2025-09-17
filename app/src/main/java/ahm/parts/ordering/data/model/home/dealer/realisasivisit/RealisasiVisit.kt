@@ -72,3 +72,5 @@ data class Visit(
     @SerializedName("realisasi_persentase")
     var realisasiPersentase: String = ""
 )
+
+

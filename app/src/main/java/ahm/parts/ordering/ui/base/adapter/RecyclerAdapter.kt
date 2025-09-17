@@ -24,3 +24,5 @@ class RecyclerAdapter<ITEM>(items: List<ITEM>,
         itemList[position].itemClick(position)
     }
 }
+
+

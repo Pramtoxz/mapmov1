@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityKreditLimitBinding
 package ahm.parts.ordering.ui.home.dealer.kreditlimit
 
 import ahm.parts.ordering.R
@@ -18,7 +19,6 @@ import ahm.parts.ordering.ui.home.dealer.kreditlimit.fragment.single.CheckKredit
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_kredit_limit.*
 
 class KreditLimitActivity : BaseActivity<KreditLimitViewModel>() {
 
@@ -28,7 +28,8 @@ class KreditLimitActivity : BaseActivity<KreditLimitViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kredit_limit)
+        binding = ActivityKreditLimitBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
 
@@ -88,3 +89,6 @@ class KreditLimitActivity : BaseActivity<KreditLimitViewModel>() {
 
 
 }
+
+
+

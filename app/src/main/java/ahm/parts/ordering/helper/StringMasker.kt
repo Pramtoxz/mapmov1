@@ -137,3 +137,5 @@ class StringMasker(private val currentLocale: Locale = Locale.US) {
         return context.createConfigurationContext(configuration).resources.getString(resId, add)
     }
 }
+
+

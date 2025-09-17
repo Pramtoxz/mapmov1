@@ -9,3 +9,5 @@ data class TypeFilter(
     @field:SerializedName("name")
     var name: String = ""
 )
+
+

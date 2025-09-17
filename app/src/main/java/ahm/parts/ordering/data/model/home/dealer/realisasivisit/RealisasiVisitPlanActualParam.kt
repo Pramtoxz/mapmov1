@@ -10,3 +10,5 @@ class RealisasiVisitPlanActualParam (
     var koordinator : String = "",
     var isAllKoordinator : Boolean = false
 )
+
+

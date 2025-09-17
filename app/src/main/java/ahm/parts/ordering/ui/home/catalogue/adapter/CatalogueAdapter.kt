@@ -18,9 +18,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.livinglifetechway.quickpermissions_kotlin.runWithPermissions
-import kotlinx.android.synthetic.main.item_buku_pedoman_pemilik.view.*
-import kotlinx.android.synthetic.main.item_buku_pedoman_pemilik.view.tvNameCatalogue
-import kotlinx.android.synthetic.main.item_catalogue_list.view.*
 
 class CatalogueFileAdapter(
     var contextView: CatalogueFileActivity,
@@ -151,3 +148,5 @@ class CatalogueFileParentAdapter(
     override fun getItemCount(): Int = listAbout.size
 
 }
+
+

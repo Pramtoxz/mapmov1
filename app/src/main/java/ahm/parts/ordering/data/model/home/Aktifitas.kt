@@ -18,3 +18,5 @@ data class Aktifitas(
         const val STATUS_SPK = "SPK"
     }
 }
+
+

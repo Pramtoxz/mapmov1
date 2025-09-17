@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityTrackingOrderBinding
 package ahm.parts.ordering.ui.home.order.tracking
 
 import ahm.parts.ordering.R
@@ -25,8 +26,6 @@ import android.widget.SeekBar
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_tracking_order.*
-import kotlinx.android.synthetic.main.item_sorting_part.view.*
 import org.json.JSONArray
 import org.json.JSONObject
 import java.util.*
@@ -50,7 +49,8 @@ class TrackingOrderActivity : BaseActivity<TrackingOrderViewModel>(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tracking_order)
+        binding = ActivityTrackingOrderBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         kodeDealer = extra(Constants.BUNDLE.KODEDEALER).getObject()
         trackingParam = extra(Constants.BUNDLE.PARAM).getObject()
@@ -156,3 +156,6 @@ class TrackingOrderActivity : BaseActivity<TrackingOrderViewModel>(){
     }
 
 }
+
+
+

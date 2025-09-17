@@ -4,3 +4,5 @@ data class PartNumberFilterSearch(
     var name : String = "",
     var nameParam : String = ""
 )
+
+

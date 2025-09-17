@@ -1,3 +1,5 @@
+private var _binding:  = null
+private val binding get() = _binding!!
 package ahm.parts.ordering.ui.home.dealer
 
 import android.os.Bundle
@@ -18,8 +20,6 @@ import ahm.parts.ordering.ui.home.dealer.collection.CollectionActivity
 import ahm.parts.ordering.ui.home.dealer.competitor.list.CompetitorActivity
 import ahm.parts.ordering.ui.home.dealer.kreditlimit.KreditLimitActivity
 import ahm.parts.ordering.ui.home.dealer.salesmanvisit.SalesmanVisitActivity
-import kotlinx.android.synthetic.main.fragment_dealer.*
-import kotlinx.android.synthetic.main.fragment_dealer_category.*
 
 class DealerFragment : BaseFragment<HomeViewModel>(), View.OnClickListener {
 
@@ -34,7 +34,8 @@ class DealerFragment : BaseFragment<HomeViewModel>(), View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_dealer, container, false)
+        return _binding = FragmentDealerBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -111,3 +112,11 @@ class DealerFragment : BaseFragment<HomeViewModel>(), View.OnClickListener {
         }
     }
 }
+
+
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }

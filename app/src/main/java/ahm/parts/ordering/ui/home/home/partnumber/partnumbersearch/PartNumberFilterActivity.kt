@@ -1,3 +1,5 @@
+private lateinit var binding: DialogBottomFilterPartBinding
+private lateinit var binding: ActivityPartNumberFilterBinding
 package ahm.parts.ordering.ui.home.home.partnumber.partnumbersearch
 
 import ahm.parts.ordering.R
@@ -23,8 +25,6 @@ import android.view.View
 import android.widget.Button
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_part_number_filter.*
-import kotlinx.android.synthetic.main.item_sorting_part.view.*
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -51,7 +51,8 @@ class PartNumberFilterActivity : BaseActivity<PartNumberFilterViewModel>(), View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_part_number_filter)
+        binding = ActivityPartNumberFilterBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -288,3 +289,5 @@ class PartNumberFilterActivity : BaseActivity<PartNumberFilterViewModel>(), View
     }
 
 }
+
+

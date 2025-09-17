@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityCollectionBinding
 package ahm.parts.ordering.ui.home.dealer.collection
 
 import ahm.parts.ordering.R
@@ -16,8 +17,6 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_collection.*
-import kotlinx.android.synthetic.main.activity_collection.rootView
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -29,7 +28,8 @@ class CollectionActivity : BaseActivity<CollectionViewModel>(), View.OnClickList
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_collection)
+        binding = ActivityCollectionBinding.inflate(layoutInflater)
+    setContentView(binding.root)
         initUI()
         initListener()
         observeData()
@@ -161,3 +161,6 @@ class CollectionActivity : BaseActivity<CollectionViewModel>(), View.OnClickList
     }
 
 }
+
+
+

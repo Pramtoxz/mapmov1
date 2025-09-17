@@ -27,3 +27,5 @@ class LoginBinding(kodeUser: String = "", password: String = "") {
     }
 
 }
+
+

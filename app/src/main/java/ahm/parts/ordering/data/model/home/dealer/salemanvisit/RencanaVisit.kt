@@ -15,3 +15,5 @@ data class RencanaVisit(
     @SerializedName("updated_at")
     var updatedAt: Any? = Any()
 )
+
+

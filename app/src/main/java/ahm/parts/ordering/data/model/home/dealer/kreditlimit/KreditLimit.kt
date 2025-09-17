@@ -15,3 +15,5 @@ data class KreditLimit(
     @SerializedName("plafon_kredit_limit")
     var plafonKreditLimit: Double = 0.0
 )
+
+

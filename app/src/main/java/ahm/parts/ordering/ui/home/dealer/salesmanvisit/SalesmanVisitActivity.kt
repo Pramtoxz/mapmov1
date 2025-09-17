@@ -1,3 +1,4 @@
+private lateinit var binding: ActivitySalesmanVisitBinding
 package ahm.parts.ordering.ui.home.dealer.salesmanvisit
 
 import ahm.parts.ordering.R
@@ -13,13 +14,13 @@ import android.Manifest
 import android.os.Bundle
 import android.view.View
 import com.livinglifetechway.quickpermissions_kotlin.runWithPermissions
-import kotlinx.android.synthetic.main.activity_salesman_visit.*
 
 class SalesmanVisitActivity : BaseActivity<HomeViewModel>(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_salesman_visit)
+        binding = ActivitySalesmanVisitBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -68,3 +69,6 @@ class SalesmanVisitActivity : BaseActivity<HomeViewModel>(), View.OnClickListene
     }
 
 }
+
+
+

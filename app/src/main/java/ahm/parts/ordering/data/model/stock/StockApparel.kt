@@ -25,3 +25,5 @@ data class StockApparel(
     @SerializedName("warna")
     var warna: String = ""
 )
+
+

@@ -74,3 +74,5 @@ abstract class BaseAdapter<ITEM> constructor(protected var itemList: ArrayList<I
 
     class Holder(itemView: View) : RecyclerView.ViewHolder(itemView)
 }
+
+

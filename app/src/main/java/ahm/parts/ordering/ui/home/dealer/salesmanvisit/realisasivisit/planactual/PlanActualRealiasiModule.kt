@@ -13,3 +13,5 @@ abstract class PlanActualRealiasiModule {
     @ViewModelKey(PlanActualRealiasiViewModel::class)
     abstract fun bindViewModel(planActualRealiasiViewModel: PlanActualRealiasiViewModel): ViewModel
 }
+
+

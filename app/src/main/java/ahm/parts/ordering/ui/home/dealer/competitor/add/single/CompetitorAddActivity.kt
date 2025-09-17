@@ -1,3 +1,5 @@
+private lateinit var binding: DialogBottomCameraBinding
+private lateinit var binding: ActivityCompetitorAddBinding
 package ahm.parts.ordering.ui.home.dealer.competitor.add.single
 
 import ahm.parts.ordering.R
@@ -20,7 +22,6 @@ import android.view.View
 import android.widget.Button
 import androidx.lifecycle.Observer
 import com.livinglifetechway.quickpermissions_kotlin.runWithPermissions
-import kotlinx.android.synthetic.main.activity_competitor_add.*
 import pl.aprilapps.easyphotopicker.*
 import java.io.File
 import javax.inject.Inject
@@ -39,7 +40,8 @@ class CompetitorAddActivity : BaseActivity<CompetitorViewModel>(), View.OnClickL
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_competitor_add)
+        binding = ActivityCompetitorAddBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         dialogHelper = DialogHelper(this, true)
 
@@ -237,3 +239,6 @@ class CompetitorAddActivity : BaseActivity<CompetitorViewModel>(), View.OnClickL
     }
 
 }
+
+
+

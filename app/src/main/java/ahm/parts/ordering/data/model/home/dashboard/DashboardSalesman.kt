@@ -98,3 +98,5 @@ data class SalesManRank(
     @Expose
     var type: String = ""
 )
+
+

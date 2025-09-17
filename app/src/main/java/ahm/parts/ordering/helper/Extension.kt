@@ -1299,3 +1299,6 @@ fun Activity.flagTransparant(){
     window.statusBarColor = Color.TRANSPARENT
 }
 
+
+
+

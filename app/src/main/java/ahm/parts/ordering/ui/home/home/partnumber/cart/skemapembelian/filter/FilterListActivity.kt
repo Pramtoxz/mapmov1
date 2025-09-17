@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityFilterListPartNumberBinding
 package ahm.parts.ordering.ui.home.home.partnumber.cart.skemapembelian.filter
 
 import ahm.parts.ordering.R
@@ -14,8 +15,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import kotlinx.android.synthetic.main.activity_filter_list_part_number.*
-import kotlinx.android.synthetic.main.item_skema_pembelian_filter.view.*
 
 class FilterListActivity : BaseActivity<HomeViewModel>(), View.OnClickListener {
 
@@ -27,7 +26,8 @@ class FilterListActivity : BaseActivity<HomeViewModel>(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_filter_list_part_number)
+        binding = ActivityFilterListPartNumberBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         kodeDealer = extra(Constants.BUNDLE.ORDERSUGESTION.JSON_DEALER).getObject()
         cart = extra(Constants.BUNDLE.PARTSEARCH.JSON_CART).getObject()
@@ -114,3 +114,6 @@ class FilterListActivity : BaseActivity<HomeViewModel>(), View.OnClickListener {
     }
 
 }
+
+
+

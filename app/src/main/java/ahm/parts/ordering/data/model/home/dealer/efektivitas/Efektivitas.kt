@@ -86,3 +86,5 @@ data class EfVisit(
     @SerializedName("realisasi_persentase")
     var realisasiPersentase: String = ""
 )
+
+

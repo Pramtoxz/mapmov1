@@ -7,8 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.item_follow_up.view.*
-import kotlinx.android.synthetic.main.item_vertical_step.view.*
 
 
 class StepAdapter(private val list:ArrayList<StepDetailProspect>) : RecyclerView.Adapter<StepAdapter.Holder>(){
@@ -63,3 +61,5 @@ class FollowUpAdapter(private val list : ArrayList<FollowUpDetailProspect>) : Re
     class Holder(val view: View) : RecyclerView.ViewHolder(view)
 
 }
+
+

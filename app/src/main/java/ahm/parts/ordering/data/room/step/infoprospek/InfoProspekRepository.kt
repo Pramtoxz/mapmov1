@@ -18,3 +18,5 @@ class InfoProspekRepository(private val dao: ProdukDao) {
         dao.deleteProduk()
     }
 }
+
+

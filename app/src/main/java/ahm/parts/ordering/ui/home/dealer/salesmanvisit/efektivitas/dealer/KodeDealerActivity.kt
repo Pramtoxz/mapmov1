@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityKodeDealerEfektivitasBinding
 package ahm.parts.ordering.ui.home.dealer.salesmanvisit.efektivitas.dealer
 
 import ahm.parts.ordering.R
@@ -14,7 +15,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_kode_dealer_efektivitas.*
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -38,7 +38,8 @@ class KodeDealerActivity : BaseActivity<EfektivitasViewModel>(), ClickPrevention
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kode_dealer_efektivitas)
+        binding = ActivityKodeDealerEfektivitasBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -162,3 +163,6 @@ class KodeDealerActivity : BaseActivity<EfektivitasViewModel>(), ClickPrevention
     }
 
 }
+
+
+

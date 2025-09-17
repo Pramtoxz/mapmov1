@@ -1,3 +1,5 @@
+private var _binding:  = null
+private val binding get() = _binding!!
 package ahm.parts.ordering.ui.home.profile
 
 import ahm.parts.ordering.R
@@ -21,7 +23,6 @@ import android.view.ViewGroup
 import androidx.core.app.ActivityOptionsCompat
 import androidx.core.util.Pair
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.fragment_profile.*
 import java.lang.Exception
 
 /**
@@ -37,7 +38,8 @@ class ProfileFragment : BaseFragment<HomeViewModel>(), ClickPrevention {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        return _binding = FragmentProfileBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -128,3 +130,11 @@ class ProfileFragment : BaseFragment<HomeViewModel>(), ClickPrevention {
         fun newInstance() = ProfileFragment()
     }
 }
+
+
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }

@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityLoginBinding
 package ahm.parts.ordering.ui.auth.login
 
 import ahm.parts.ordering.R
@@ -12,7 +13,6 @@ import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
 import android.view.View
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_login.*
 
 /**
  * class ini mengandung interaksi UI dengan layout activity_login.xml
@@ -22,7 +22,8 @@ class LoginActivity : BaseActivity<LoginViewModel>(), ClickPrevention {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -93,3 +94,6 @@ class LoginActivity : BaseActivity<LoginViewModel>(), ClickPrevention {
         super.onClick(v)
     }
 }
+
+
+

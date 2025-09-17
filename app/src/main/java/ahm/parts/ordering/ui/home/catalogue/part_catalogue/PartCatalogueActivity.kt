@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityPartCatalogueBinding
 package ahm.parts.ordering.ui.home.catalogue.part_catalogue
 
 import ahm.parts.ordering.R
@@ -13,14 +14,13 @@ import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import kotlinx.android.synthetic.main.activity_part_catalogue.*
-import kotlinx.android.synthetic.main.content_loading_list.*
 
 class PartCatalogueActivity : BaseActivity<HomeViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_part_catalogue)
+        binding = ActivityPartCatalogueBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
 
@@ -84,3 +84,6 @@ class PartCatalogueActivity : BaseActivity<HomeViewModel>() {
     }
 
 }
+
+
+

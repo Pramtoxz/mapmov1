@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityPartNumberSearchBinding
 package ahm.parts.ordering.ui.home.home.ordersugestion
 
 import ahm.parts.ordering.R
@@ -13,7 +14,6 @@ import ahm.parts.ordering.ui.home.home.partnumber.tipemotor.TipeMotorSearchActiv
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_part_number_search.*
 
 class CheckStockSearchActivity : BaseActivity<HomeViewModel>(), View.OnClickListener {
 
@@ -22,7 +22,8 @@ class CheckStockSearchActivity : BaseActivity<HomeViewModel>(), View.OnClickList
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_part_number_search)
+        binding = ActivityPartNumberSearchBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -101,3 +102,6 @@ class CheckStockSearchActivity : BaseActivity<HomeViewModel>(), View.OnClickList
 
 
 }
+
+
+

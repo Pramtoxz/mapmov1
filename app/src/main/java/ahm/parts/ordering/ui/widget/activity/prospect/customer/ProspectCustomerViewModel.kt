@@ -6,3 +6,5 @@ import javax.inject.Inject
 class ProspectCustomerViewModel @Inject constructor() : BaseViewModel(){
 
 }
+
+

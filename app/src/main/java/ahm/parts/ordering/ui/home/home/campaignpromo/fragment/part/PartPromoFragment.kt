@@ -1,3 +1,5 @@
+private var _binding:  = null
+private val binding get() = _binding!!
 package ahm.parts.ordering.ui.home.home.campaignpromo.fragment.part
 
 import ahm.parts.ordering.R
@@ -14,8 +16,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.fragment_part_promo.*
-import kotlinx.android.synthetic.main.item_part_promo.view.*
 
 /**
  * class ini mengandung interaksi UI dengan layout fragment_part_promo.xml
@@ -37,7 +37,8 @@ class PartPromoFragment : BaseFragment<CampaignPromoViewModel>(), View.OnClickLi
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_part_promo, container, false)
+        return _binding = FragmentPartPromoBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -157,3 +158,11 @@ class PartPromoFragment : BaseFragment<CampaignPromoViewModel>(), View.OnClickLi
 
 
 }
+
+
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }

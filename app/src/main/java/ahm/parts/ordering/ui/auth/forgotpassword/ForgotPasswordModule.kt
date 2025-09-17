@@ -13,3 +13,5 @@ abstract class ForgotPasswordModule {
     @ViewModelKey(ForgotPasswordViewModel::class)
     abstract fun bindViewModel(forgotPasswordViewModel: ForgotPasswordViewModel): ViewModel
 }
+
+

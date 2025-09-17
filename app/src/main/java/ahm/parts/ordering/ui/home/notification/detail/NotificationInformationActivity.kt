@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityNotificationInformationDetailBinding
 package ahm.parts.ordering.ui.home.notification.detail
 
 import ahm.parts.ordering.R
@@ -11,7 +12,6 @@ import ahm.parts.ordering.ui.home.HomeViewModel
 import ahm.parts.ordering.ui.home.notification.NotificationViewModel
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_notification_information_detail.*
 
 class NotificationInformationActivity : BaseActivity<NotificationViewModel>(), View.OnClickListener {
 
@@ -19,7 +19,8 @@ class NotificationInformationActivity : BaseActivity<NotificationViewModel>(), V
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_notification_information_detail)
+        binding = ActivityNotificationInformationDetailBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -47,3 +48,6 @@ class NotificationInformationActivity : BaseActivity<NotificationViewModel>(), V
     }
 
 }
+
+
+

@@ -15,3 +15,5 @@ data class Hari(
     @SerializedName("tgl")
     var tgl: Int = 0
 )
+
+

@@ -154,3 +154,5 @@ class FavoriteAdapter constructor(
         return items.size
     }
 }
+
+

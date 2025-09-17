@@ -297,3 +297,5 @@ class CollectionAdapter constructor(
         return items.size
     }
 }
+
+

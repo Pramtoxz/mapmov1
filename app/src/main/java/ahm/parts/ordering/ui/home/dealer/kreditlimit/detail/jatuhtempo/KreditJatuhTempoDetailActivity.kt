@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityKreditJatuhTempoDetailBinding
 package ahm.parts.ordering.ui.home.dealer.kreditlimit.detail.jatuhtempo
 
 import ahm.parts.ordering.R
@@ -8,7 +9,6 @@ import ahm.parts.ordering.ui.base.BaseActivity
 import ahm.parts.ordering.ui.home.dealer.kreditlimit.KreditLimitViewModel
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_kredit_jatuh_tempo_detail.*
 
 class KreditJatuhTempoDetailActivity : BaseActivity<KreditLimitViewModel>(), View.OnClickListener {
 
@@ -16,7 +16,8 @@ class KreditJatuhTempoDetailActivity : BaseActivity<KreditLimitViewModel>(), Vie
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kredit_jatuh_tempo_detail)
+        binding = ActivityKreditJatuhTempoDetailBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         kreditJatuhTempo = extra(Constants.BUNDLE.JSON).getObject()
 
@@ -58,3 +59,6 @@ class KreditJatuhTempoDetailActivity : BaseActivity<KreditLimitViewModel>(), Vie
     }
 
 }
+
+
+

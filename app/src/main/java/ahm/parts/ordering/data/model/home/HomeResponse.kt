@@ -21,3 +21,5 @@ data class HomeResponse(
     @SerializedName("tugas_terunda")
     var pendingActivity: TugasTertunda = TugasTertunda()
 )
+
+

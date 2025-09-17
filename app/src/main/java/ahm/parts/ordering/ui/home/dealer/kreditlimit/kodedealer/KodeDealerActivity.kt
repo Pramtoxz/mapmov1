@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityKodeDealerKreditlimitBinding
 package ahm.parts.ordering.ui.home.dealer.kreditlimit.kodedealer
 
 import ahm.parts.ordering.R
@@ -10,9 +11,6 @@ import ahm.parts.ordering.ui.home.dealer.kreditlimit.adapter.KodeDealerAdapter
 import ahm.parts.ordering.ui.home.home.partnumber.kodedealer.KodeDealerViewModel
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_kode_dealer_kreditlimit.*
-import kotlinx.android.synthetic.main.item_content_kelompok_barang_search.view.*
-import kotlinx.android.synthetic.main.item_header_kelompok_barang_search.view.*
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -28,7 +26,8 @@ class KodeDealerActivity : BaseActivity<KodeDealerViewModel>(), View.OnClickList
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kode_dealer_kreditlimit)
+        binding = ActivityKodeDealerKreditlimitBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -149,3 +148,6 @@ class KodeDealerActivity : BaseActivity<KodeDealerViewModel>(), View.OnClickList
     }
 
 }
+
+
+

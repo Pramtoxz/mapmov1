@@ -1,3 +1,5 @@
+private var _binding:  = null
+private val binding get() = _binding!!
 package ahm.parts.ordering.ui.home.dealer.kreditlimit.fragment
 
 import ahm.parts.ordering.R
@@ -17,7 +19,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.fragment_check_kredit_limit.*
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -31,7 +32,8 @@ class CheckKreditLimitFragment : BaseFragment<KreditLimitViewModel>(), View.OnCl
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_check_kredit_limit, container, false)
+        return _binding = FragmentCheckKreditLimitBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -163,3 +165,11 @@ class CheckKreditLimitFragment : BaseFragment<KreditLimitViewModel>(), View.OnCl
 
 
 }
+
+
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }

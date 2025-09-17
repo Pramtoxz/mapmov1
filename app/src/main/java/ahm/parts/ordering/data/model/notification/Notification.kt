@@ -27,3 +27,5 @@ data class Information(
     @SerializedName("small_info")
     var smallInfo: String = ""
 )
+
+

@@ -13,3 +13,5 @@ abstract class CompetitorModule {
     @ViewModelKey(CompetitorViewModel::class)
     abstract fun bindViewModel(competitorViewModel: CompetitorViewModel): ViewModel
 }
+
+

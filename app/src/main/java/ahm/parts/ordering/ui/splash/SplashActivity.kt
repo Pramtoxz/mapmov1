@@ -1,3 +1,4 @@
+private lateinit var binding: ActivitySplashBinding
 package ahm.parts.ordering.ui.splash
 
 import ahm.parts.ordering.R
@@ -16,7 +17,8 @@ class SplashActivity : BaseActivity<SplashViewModel>() {
         super.onCreate(savedInstanceState)
         flagFullScreen()
 
-        setContentView(R.layout.activity_splash)
+        binding = ActivitySplashBinding.inflate(layoutInflater)
+    setContentView(binding.root)
         lifecycle.addObserver(viewModel)
         observeData()
     }
@@ -42,3 +44,6 @@ class SplashActivity : BaseActivity<SplashViewModel>() {
         fade()
     }
 }
+
+
+

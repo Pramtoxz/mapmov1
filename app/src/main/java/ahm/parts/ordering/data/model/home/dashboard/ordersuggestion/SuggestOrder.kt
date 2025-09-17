@@ -92,3 +92,5 @@ data class TypeMotor(
     @SerializedName("type_motor")
     var typeMotor: String = ""
 )
+
+

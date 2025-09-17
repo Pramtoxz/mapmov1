@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityVisitAddNewBinding
 package ahm.parts.ordering.ui.home.dealer.salesmanvisit.visit
 
 import ahm.parts.ordering.R
@@ -21,7 +22,6 @@ import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.maps.model.LatLng
 import com.livinglifetechway.quickpermissions_kotlin.runWithPermissions
-import kotlinx.android.synthetic.main.activity_visit_add_new.*
 
 class AddNewVisitActivity : BaseActivity<VisitViewModel>(), View.OnClickListener {
 
@@ -32,7 +32,8 @@ class AddNewVisitActivity : BaseActivity<VisitViewModel>(), View.OnClickListener
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_visit_add_new)
+        binding = ActivityVisitAddNewBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -179,3 +180,6 @@ class AddNewVisitActivity : BaseActivity<VisitViewModel>(), View.OnClickListener
     rencanaVisit,
     true
 )*/
+
+
+

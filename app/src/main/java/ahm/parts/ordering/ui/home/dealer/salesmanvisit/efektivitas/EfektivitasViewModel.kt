@@ -18,7 +18,6 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_efektivitas_visit_plan_actual.*
 import org.json.JSONObject
 import javax.inject.Inject
 
@@ -622,3 +621,5 @@ class EfektivitasViewModel @Inject constructor(private val context : Application
     }
 
 }
+
+

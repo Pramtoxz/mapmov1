@@ -10,7 +10,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.livinglifetechway.quickpermissions_kotlin.runWithPermissions
-import kotlinx.android.synthetic.main.item_buku_pedoman_pemilik.view.*
 //
 //class CatalogueFileAdapter(
 //    var contextView: CatalogueFileActivity,
@@ -54,3 +53,5 @@ import kotlinx.android.synthetic.main.item_buku_pedoman_pemilik.view.*
 //    override fun getItemCount(): Int = listAbout.size
 //
 //}
+
+

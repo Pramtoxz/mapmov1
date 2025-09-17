@@ -13,3 +13,5 @@ abstract class ActivitySalesModule {
     @ViewModelKey(ActivitySalesViewModel::class)
     abstract fun bindViewModel(activitySalesViewModel: ActivitySalesViewModel): ViewModel
 }
+
+

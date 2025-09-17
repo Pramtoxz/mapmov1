@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityBrosurDetailPreviewBinding
 package ahm.parts.ordering.ui.home.home.campaignpromo.fragment.brosur
 
 import ahm.parts.ordering.R
@@ -9,13 +10,13 @@ import ahm.parts.ordering.helper.loadImage
 import ahm.parts.ordering.ui.base.BaseActivity
 import ahm.parts.ordering.ui.home.HomeViewModel
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_brosur_detail_preview.*
 
 class BrosureDetailActivity : BaseActivity<HomeViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_brosur_detail_preview)
+        binding = ActivityBrosurDetailPreviewBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
 
@@ -31,3 +32,6 @@ class BrosureDetailActivity : BaseActivity<HomeViewModel>() {
     }
 
 }
+
+
+

@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityRencanaVisitBinding
 package ahm.parts.ordering.ui.home.dealer.salesmanvisit.visit.rencanavisit
 
 import ahm.parts.ordering.R
@@ -10,7 +11,6 @@ import ahm.parts.ordering.ui.home.dealer.salesmanvisit.visit.VisitViewModel
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_rencana_visit.*
 
 class RencanaVisitActivity : BaseActivity<VisitViewModel>(), View.OnClickListener {
 
@@ -21,7 +21,8 @@ class RencanaVisitActivity : BaseActivity<VisitViewModel>(), View.OnClickListene
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_rencana_visit)
+        binding = ActivityRencanaVisitBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         kodeDealer = extra(Constants.BUNDLE.JSON).getObject()
 
@@ -78,3 +79,6 @@ class RencanaVisitActivity : BaseActivity<VisitViewModel>(), View.OnClickListene
     }
 
 }
+
+
+

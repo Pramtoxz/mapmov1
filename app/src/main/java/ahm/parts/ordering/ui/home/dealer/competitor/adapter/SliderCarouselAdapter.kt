@@ -95,3 +95,6 @@ class SliderCarouselAdapter(private val context: Activity) : PagerAdapter(), Car
     }
 
 }*/
+
+
+

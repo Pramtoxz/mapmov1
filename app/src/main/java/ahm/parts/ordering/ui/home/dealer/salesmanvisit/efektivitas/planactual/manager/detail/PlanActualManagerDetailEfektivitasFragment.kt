@@ -1,3 +1,5 @@
+private var _binding:  = null
+private val binding get() = _binding!!
 package ahm.parts.ordering.ui.home.dealer.salesmanvisit.efektivitas.planactual.manager.detail
 
 import ahm.parts.ordering.R
@@ -24,7 +26,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
 
-import kotlinx.android.synthetic.main.fragment_realisasi_visit_plan_detail.*
 import retrofit2.HttpException
 import java.lang.reflect.Field
 import java.util.*
@@ -43,7 +44,8 @@ class PlanActualManagerDetailEfektivitasFragment : BaseFragment<EfektivitasViewM
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_realisasi_visit_plan_detail, container, false)
+        return _binding = FragmentRealisasiVisitPlanDetailBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -112,3 +114,11 @@ class PlanActualManagerDetailEfektivitasFragment : BaseFragment<EfektivitasViewM
     }
 
 }
+
+
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }

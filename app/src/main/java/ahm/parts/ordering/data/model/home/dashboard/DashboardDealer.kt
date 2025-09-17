@@ -30,3 +30,5 @@ data class DashboardDealer(
     @Expose
     var totalOmzet: Double = 0.0
 )
+
+

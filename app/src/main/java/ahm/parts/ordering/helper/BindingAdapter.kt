@@ -24,3 +24,5 @@ open class BindingAdapter {
         }
     }
 }
+
+

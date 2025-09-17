@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityCompetitorBinding
 package ahm.parts.ordering.ui.home.dealer.competitor.list
 
 import ahm.parts.ordering.R
@@ -12,8 +13,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_competitor.*
-import kotlinx.android.synthetic.main.item_competitor.view.*
 
 class CompetitorActivity : BaseActivity<CompetitorViewModel>(), View.OnClickListener {
 
@@ -22,7 +21,8 @@ class CompetitorActivity : BaseActivity<CompetitorViewModel>(), View.OnClickList
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_competitor)
+        binding = ActivityCompetitorBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -108,3 +108,6 @@ class CompetitorActivity : BaseActivity<CompetitorViewModel>(), View.OnClickList
     }
 
 }
+
+
+

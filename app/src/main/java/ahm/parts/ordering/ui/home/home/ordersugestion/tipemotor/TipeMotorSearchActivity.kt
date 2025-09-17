@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityTipeMotorSearchBinding
 package ahm.parts.ordering.ui.home.home.ordersugestion.tipemotor
 
 import ahm.parts.ordering.R
@@ -5,15 +6,13 @@ import ahm.parts.ordering.helper.setAdapter
 import ahm.parts.ordering.ui.base.BaseActivity
 import ahm.parts.ordering.ui.home.HomeViewModel
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_tipe_motor_search.*
-import kotlinx.android.synthetic.main.item_content_kelompok_barang_search.view.*
-import kotlinx.android.synthetic.main.item_header_kelompok_barang_search.view.*
 
 class TipeMotorSearchActivity : BaseActivity<HomeViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tipe_motor_search)
+        binding = ActivityTipeMotorSearchBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -65,3 +64,6 @@ class TipeMotorSearchActivity : BaseActivity<HomeViewModel>() {
     }
 
 }
+
+
+

@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityRealisasiVisitPlanDetailViewpagerBinding
 package ahm.parts.ordering.ui.home.dealer.salesmanvisit.realisasivisit.planactual.manager.detail
 
 import ahm.parts.ordering.R
@@ -11,7 +12,6 @@ import ahm.parts.ordering.ui.widget.viewpager.ViewPagerAdapter
 import android.os.Bundle
 import android.view.View
 import androidx.viewpager.widget.ViewPager
-import kotlinx.android.synthetic.main.activity_realisasi_visit_plan_detail_viewpager.*
 
 class PlanActualManagerDetailActivity : BaseActivity<PlanActualRealiasiViewModel>(), View.OnClickListener {
 
@@ -21,7 +21,8 @@ class PlanActualManagerDetailActivity : BaseActivity<PlanActualRealiasiViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_realisasi_visit_plan_detail_viewpager)
+        binding = ActivityRealisasiVisitPlanDetailViewpagerBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -108,3 +109,6 @@ class PlanActualManagerDetailActivity : BaseActivity<PlanActualRealiasiViewModel
     }
 
 }
+
+
+

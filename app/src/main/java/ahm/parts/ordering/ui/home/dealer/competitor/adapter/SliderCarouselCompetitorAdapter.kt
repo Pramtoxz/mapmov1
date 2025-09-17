@@ -92,3 +92,5 @@ class SliderCarouselCompetitorAdapter(private val context: Activity) : PagerAdap
     }
 
 }
+
+

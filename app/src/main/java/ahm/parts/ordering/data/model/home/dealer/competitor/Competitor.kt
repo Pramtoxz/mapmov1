@@ -35,3 +35,5 @@ data class Photo(
     @SerializedName("photo")
     var photo: String = ""
 )
+
+

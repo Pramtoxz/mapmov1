@@ -1,3 +1,5 @@
+private lateinit var binding: DialogBottomVisitAddConfirmationBinding
+private lateinit var binding: ActivitySalesVisitMapBinding
 package ahm.parts.ordering.ui.home.dealer.salesmanvisit.visit.salesvisit
 
 import ahm.parts.ordering.R
@@ -29,7 +31,6 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
 import com.google.android.gms.maps.model.LatLngBounds
-import kotlinx.android.synthetic.main.activity_sales_visit_map.*
 import java.util.ArrayList
 
 
@@ -61,7 +62,8 @@ class SalesVisitActivity : BaseActivity<VisitViewModel>(), OnMapReadyCallback,
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sales_visit_map)
+        binding = ActivitySalesVisitMapBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         dealer = extra(Constants.BUNDLE.DEALER.KODE_DEALER).getObject()
         rencanaVisit = extra(Constants.BUNDLE.DEALER.RENCANA_VISIT).getObject()
@@ -388,3 +390,6 @@ class SalesVisitActivity : BaseActivity<VisitViewModel>(), OnMapReadyCallback,
     }
 
 }
+
+
+

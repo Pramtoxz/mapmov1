@@ -562,3 +562,6 @@ class EfektivitasPlanActualSalesmanManagerAdapter constructor(
         return items.size
     }
 }
+
+
+

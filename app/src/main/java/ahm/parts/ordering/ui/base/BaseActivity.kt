@@ -856,3 +856,5 @@ abstract class BaseActivity<VM : BaseViewModel> : NoViewModelActivity() {
         fade()
     }
 }
+
+

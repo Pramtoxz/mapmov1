@@ -17,3 +17,5 @@ data class StockUnit(
     @SerializedName("total_accessories")
     var totalAccessories: Int = 0
 )
+
+

@@ -15,3 +15,5 @@ data class KodeUnitTipe(
         return "$name,$code"
     }
 }
+
+

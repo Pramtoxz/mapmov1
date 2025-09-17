@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityPartNumberFilterBinding
 package ahm.parts.ordering.ui.home.home.ordersugestion.cekstockpartfilter
 
 import ahm.parts.ordering.R
@@ -13,8 +14,6 @@ import ahm.parts.ordering.ui.home.home.partnumber.detail.PartNumberDetailActivit
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_part_number_filter.*
-import kotlinx.android.synthetic.main.item_favorite_part_number.view.*
 
 class CheckStockFilterActivity : BaseActivity<CheckStockViewModel>(), View.OnClickListener {
 
@@ -32,7 +31,8 @@ class CheckStockFilterActivity : BaseActivity<CheckStockViewModel>(), View.OnCli
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_part_number_filter)
+        binding = ActivityPartNumberFilterBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -144,3 +144,6 @@ class CheckStockFilterActivity : BaseActivity<CheckStockViewModel>(), View.OnCli
     }
 
 }
+
+
+

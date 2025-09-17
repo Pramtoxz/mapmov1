@@ -10,3 +10,5 @@ class EfektivitasPlanActualParam (
     var koordinator : String = "",
     var isAllKoordinator : Boolean = false
 )
+
+

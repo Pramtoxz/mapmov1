@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityHomeBinding
 package ahm.parts.ordering.ui.home
 
 import ahm.parts.ordering.R
@@ -24,7 +25,6 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.forEach
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_home.*
 
 /**
  * class ini mengandung interaksi UI dengan layout activity_home.xml
@@ -40,7 +40,8 @@ class HomeActivity : BaseActivity<HomeViewModel>(), ClickPrevention {
         window.decorView.systemUiVisibility =
             View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
         window.statusBarColor = Color.TRANSPARENT
-        setContentView(R.layout.activity_home)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initNavigation()
     }
@@ -204,3 +205,6 @@ class HomeActivity : BaseActivity<HomeViewModel>(), ClickPrevention {
         super.onClick(v)
     }
 }
+
+
+

@@ -20,7 +20,6 @@ import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import kotlinx.android.synthetic.main.item_sorting_order.view.*
 
 /**
  * Created by nuryazid on 4/20/18.
@@ -412,3 +411,6 @@ class TrackingFilterDialog {
     }
 
 }
+
+
+

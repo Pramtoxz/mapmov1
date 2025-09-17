@@ -1,3 +1,5 @@
+private var _binding:  = null
+private val binding get() = _binding!!
 package ahm.parts.ordering.ui.home.dealer.salesmanvisit.realisasivisit.planactual.detail
 
 import ahm.parts.ordering.R
@@ -15,7 +17,6 @@ import android.os.Bundle
 import android.view.*
 import androidx.lifecycle.Observer
 
-import kotlinx.android.synthetic.main.fragment_realisasi_visit_plan_detail.*
 import kotlin.collections.ArrayList
 
 class PlanActualDetailRealisasiFragment : BaseFragment<PlanActualRealiasiViewModel>(){
@@ -31,7 +32,8 @@ class PlanActualDetailRealisasiFragment : BaseFragment<PlanActualRealiasiViewMod
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_realisasi_visit_plan_detail, container, false)
+        return _binding = FragmentRealisasiVisitPlanDetailBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -96,3 +98,11 @@ class PlanActualDetailRealisasiFragment : BaseFragment<PlanActualRealiasiViewMod
     }
 
 }
+
+
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }

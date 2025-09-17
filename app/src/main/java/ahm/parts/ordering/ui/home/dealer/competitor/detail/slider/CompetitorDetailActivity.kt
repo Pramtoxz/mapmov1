@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityCompetitorDetailSliderBinding
 package ahm.parts.ordering.ui.home.dealer.competitor.detail.slider
 
 import ahm.parts.ordering.R
@@ -16,7 +17,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import androidx.viewpager.widget.ViewPager
-import kotlinx.android.synthetic.main.activity_competitor_detail_slider.*
 import java.util.*
 
 class CompetitorDetailActivity : BaseActivity<HomeViewModel>(), View.OnClickListener {
@@ -27,7 +27,8 @@ class CompetitorDetailActivity : BaseActivity<HomeViewModel>(), View.OnClickList
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_competitor_detail_slider)
+        binding = ActivityCompetitorDetailSliderBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -96,3 +97,6 @@ class CompetitorDetailActivity : BaseActivity<HomeViewModel>(), View.OnClickList
     }
 
 }
+
+
+

@@ -16,3 +16,5 @@ class ProdukRepository(private val dao: ProdukDao) {
         dao.deleteProduk()
     }
 }
+
+

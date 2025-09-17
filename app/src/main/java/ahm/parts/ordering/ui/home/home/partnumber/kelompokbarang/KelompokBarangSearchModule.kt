@@ -13,3 +13,5 @@ abstract class KelompokBarangSearchModule {
     @ViewModelKey(KelompokBarangSearchViewModel::class)
     abstract fun bindViewModel(kelompokBarangViewModel: KelompokBarangSearchViewModel): ViewModel
 }
+
+

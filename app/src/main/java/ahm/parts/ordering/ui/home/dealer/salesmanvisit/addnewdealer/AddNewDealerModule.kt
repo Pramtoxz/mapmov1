@@ -13,3 +13,5 @@ abstract class AddNewDealerModule {
     @ViewModelKey(AddNewDealerViewModel::class)
     abstract fun bindViewModel(addNewDealerViewModel: AddNewDealerViewModel): ViewModel
 }
+
+

@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityCampaignPromoBinding
 package ahm.parts.ordering.ui.home.home.campaignpromo
 
 import ahm.parts.ordering.R
@@ -11,8 +12,6 @@ import ahm.parts.ordering.ui.home.home.campaignpromo.fragment.brosur.BrosurPromo
 import ahm.parts.ordering.ui.home.home.campaignpromo.fragment.part.PartPromoFragment
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.activity_campaign_promo.*
-import kotlinx.android.synthetic.main.item_campaign_promo_tab.view.*
 
 /**
  * class ini mengandung interaksi UI dengan layout activity_campaign_promo.xml
@@ -25,7 +24,8 @@ class CampaignPromoActivity : BaseActivity<HomeViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_campaign_promo)
+        binding = ActivityCampaignPromoBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
 
@@ -84,3 +84,6 @@ class CampaignPromoActivity : BaseActivity<HomeViewModel>() {
 
 
 }
+
+
+

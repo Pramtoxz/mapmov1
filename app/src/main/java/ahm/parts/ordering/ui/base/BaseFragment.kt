@@ -763,3 +763,5 @@ abstract class BaseFragment<VM : BaseViewModel> : DaggerFragment(), ClickPrevent
         super.onClick(v)
     }
 }
+
+

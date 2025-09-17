@@ -51,3 +51,5 @@ typealias CollectionAddPaymentActivity = CollectionAddMultipleActivity
 typealias SkemaPembelianOrderSuggestionActivity = SkemaPembelianActivity
 
 typealias OrderMenu = OrderFragment
+
+

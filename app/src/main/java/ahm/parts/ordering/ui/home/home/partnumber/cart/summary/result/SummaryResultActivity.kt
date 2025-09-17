@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityPartNumberSummaryResultBinding
 package ahm.parts.ordering.ui.home.home.partnumber.cart.summary.result
 
 import ahm.parts.ordering.R
@@ -15,13 +16,13 @@ import ahm.parts.ordering.ui.home.home.partnumber.cart.CartViewModel
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_part_number_summary_result.*
 
 class SummaryResultActivity : BaseActivity<CartViewModel>(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_part_number_summary_result)
+        binding = ActivityPartNumberSummaryResultBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -67,3 +68,6 @@ class SummaryResultActivity : BaseActivity<CartViewModel>(), View.OnClickListene
     }
 
 }
+
+
+

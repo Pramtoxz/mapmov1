@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityDetailProspectBinding
 package ahm.parts.ordering.ui.widget.activity.prospect.detail
 
 import ahm.parts.ordering.R
@@ -9,7 +10,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_detail_prospect.*
 import java.util.ArrayList
 
 class DetailProspectActivity : BaseActivity<DetailProspectViewModel>() {
@@ -31,7 +31,8 @@ class DetailProspectActivity : BaseActivity<DetailProspectViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_prospect)
+        binding = ActivityDetailProspectBinding.inflate(layoutInflater)
+    setContentView(binding.root)
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
         window.statusBarColor = Color.TRANSPARENT
         setSupportActionBar(toolbar_detail_prospect)
@@ -83,3 +84,6 @@ class DetailProspectActivity : BaseActivity<DetailProspectViewModel>() {
     }
 
 }
+
+
+

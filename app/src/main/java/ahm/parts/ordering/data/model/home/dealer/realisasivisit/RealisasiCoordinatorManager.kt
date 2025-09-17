@@ -83,3 +83,5 @@ data class VisitSalesman(
     @SerializedName("realisasi_persentase")
     var realisasiPersentase: String = ""
 )
+
+

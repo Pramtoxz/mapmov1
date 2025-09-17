@@ -1,3 +1,5 @@
+private var _binding:  = null
+private val binding get() = _binding!!
 package ahm.parts.ordering.ui.home.home.campaignpromo.fragment.brosur
 
 import ahm.parts.ordering.R
@@ -14,8 +16,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.fragment_brosur_promo.*
-import kotlinx.android.synthetic.main.item_brosur_promo.view.*
 
 /**
  * class ini mengandung interaksi UI dengan layout fragment_brosur_promo.xml
@@ -35,7 +35,8 @@ class BrosurPromoFragment : BaseFragment<CampaignPromoViewModel>(), View.OnClick
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_brosur_promo, container, false)
+        return _binding = FragmentBrosurPromoBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -126,3 +127,11 @@ class BrosurPromoFragment : BaseFragment<CampaignPromoViewModel>(), View.OnClick
 
 
 }
+
+
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }

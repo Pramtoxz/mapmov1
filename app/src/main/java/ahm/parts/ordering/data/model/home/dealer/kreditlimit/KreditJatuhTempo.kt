@@ -17,3 +17,5 @@ data class KreditJatuhTempo(
     @SerializedName("flag")
     var flag: String = ""
 )
+
+

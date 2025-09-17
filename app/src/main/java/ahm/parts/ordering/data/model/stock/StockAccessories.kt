@@ -17,3 +17,5 @@ data class StockAccessories(
     @SerializedName("stock")
     var stock: Int = 0
 )
+
+

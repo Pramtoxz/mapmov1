@@ -43,3 +43,5 @@ data class Invoice(
     @SerializedName("total_price")
     var totalPrice: Double = 0.0
 )
+
+

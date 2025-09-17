@@ -26,3 +26,5 @@ data class Leaderboard(
         const val RANGKING_DOWN = "turun"
     }
 }
+
+

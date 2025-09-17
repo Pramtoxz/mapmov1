@@ -13,3 +13,5 @@ abstract class EfektivitasModule {
     @ViewModelKey(EfektivitasViewModel::class)
     abstract fun bindViewModel(efektivitasViewModel: EfektivitasViewModel): ViewModel
 }
+
+

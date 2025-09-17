@@ -1,3 +1,5 @@
+private var _binding:  = null
+private val binding get() = _binding!!
 package ahm.parts.ordering.ui.home.order.order
 
 import ahm.parts.ordering.R
@@ -26,7 +28,6 @@ import android.widget.DatePicker
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import com.whiteelephant.monthpicker.MonthPickerDialog
-import kotlinx.android.synthetic.main.fragment_order.*
 import java.lang.reflect.Field
 import java.util.*
 import kotlin.collections.ArrayList
@@ -50,7 +51,8 @@ class OrderFragment : BaseFragment<OrderViewModel>(), View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_order, container, false)
+        return _binding = FragmentOrderBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -306,3 +308,11 @@ class OrderFragment : BaseFragment<OrderViewModel>(), View.OnClickListener {
 //                    }
 //                }
 }
+
+
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }

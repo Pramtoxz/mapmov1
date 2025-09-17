@@ -13,3 +13,5 @@ abstract class ProfileModule {
     @ViewModelKey(ProfileViewModel::class)
     abstract fun bindViewModel(profileViewModel: ProfileViewModel): ViewModel
 }
+
+

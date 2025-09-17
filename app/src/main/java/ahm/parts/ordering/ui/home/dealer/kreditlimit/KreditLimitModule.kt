@@ -13,3 +13,5 @@ abstract class KreditLimitModule {
     @ViewModelKey(KreditLimitViewModel::class)
     abstract fun bindViewModel(kreditLimitViewModel: KreditLimitViewModel): ViewModel
 }
+
+

@@ -18,3 +18,5 @@ interface InfoProspekDao {
     @Query("SELECT * from info_prospek WHERE idUser = 1 LIMIT 1")
     fun getInfoProspek(): LiveData<Produk?>
 }
+
+

@@ -11,10 +11,6 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import kotlinx.android.synthetic.main.dialog_bottom_filter_stock.btnCancel
-import kotlinx.android.synthetic.main.dialog_bottom_filter_stock.btnOk
-import kotlinx.android.synthetic.main.dialog_bottom_kode_tipe_unit.*
-import kotlinx.android.synthetic.main.dialog_bottom_selection_list.*
 
 open class DialogHelper(val context: Activity, val isRequired : Boolean) {
 
@@ -191,3 +187,5 @@ open class DialogHelper(val context: Activity, val isRequired : Boolean) {
         return dialog
     }
 }
+
+

@@ -12,3 +12,5 @@ open class ParamProspek {
     var preferensiUji = String()
 
 }
+
+

@@ -13,3 +13,5 @@ abstract class CampaignPromoModule {
     @ViewModelKey(CampaignPromoViewModel::class)
     abstract fun bindViewModel(homeCampaignPromoViewModel: CampaignPromoViewModel): ViewModel
 }
+
+

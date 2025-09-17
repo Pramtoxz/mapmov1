@@ -1,3 +1,5 @@
+private lateinit var binding: DialogBottomAlertForgotBinding
+private lateinit var binding: ActivityCompetitorAddMultipleBinding
 package ahm.parts.ordering.ui.home.dealer.competitor.add.multiple
 
 import ahm.parts.ordering.R
@@ -24,7 +26,6 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import androidx.lifecycle.Observer
 import com.livinglifetechway.quickpermissions_kotlin.runWithPermissions
-import kotlinx.android.synthetic.main.activity_competitor_add_multiple.*
 import org.json.JSONArray
 import org.json.JSONObject
 import pl.aprilapps.easyphotopicker.*
@@ -43,7 +44,8 @@ class CompetitorAddMultipleActivity : BaseActivity<CompetitorViewModel>(), View.
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_competitor_add_multiple)
+        binding = ActivityCompetitorAddMultipleBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -266,3 +268,6 @@ class CompetitorAddMultipleActivity : BaseActivity<CompetitorViewModel>(), View.
 
 
 }
+
+
+

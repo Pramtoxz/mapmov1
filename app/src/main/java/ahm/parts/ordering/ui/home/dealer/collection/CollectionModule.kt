@@ -13,3 +13,5 @@ abstract class CollectionModule {
     @ViewModelKey(CollectionViewModel::class)
     abstract fun bindViewModel(collectionViewModel: CollectionViewModel): ViewModel
 }
+
+

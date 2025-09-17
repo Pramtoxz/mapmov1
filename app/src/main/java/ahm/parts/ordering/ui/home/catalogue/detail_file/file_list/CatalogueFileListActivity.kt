@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityBukuPedomanPemilikBinding
 package ahm.parts.ordering.ui.home.catalogue.detail_file.file_list
 
 import ahm.parts.ordering.R
@@ -18,8 +19,6 @@ import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.livinglifetechway.quickpermissions_kotlin.runWithPermissions
-import kotlinx.android.synthetic.main.activity_buku_pedoman_pemilik.*
-import kotlinx.android.synthetic.main.item_buku_pedoman_pemilik.view.*
 
 class CatalogueFileListActivity : BaseActivity<HomeViewModel>() {
 
@@ -34,7 +33,8 @@ class CatalogueFileListActivity : BaseActivity<HomeViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_buku_pedoman_pemilik)
+        binding = ActivityBukuPedomanPemilikBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         observeData()
@@ -122,3 +122,6 @@ class CatalogueFileListActivity : BaseActivity<HomeViewModel>() {
 //    }
 
 }
+
+
+

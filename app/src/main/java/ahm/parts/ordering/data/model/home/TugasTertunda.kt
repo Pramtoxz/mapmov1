@@ -11,3 +11,5 @@ data class TugasTertunda(
     @SerializedName("spk")
     var spk: Int = 0
 )
+
+

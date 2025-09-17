@@ -13,3 +13,5 @@ abstract class VisitModule {
     @ViewModelKey(VisitViewModel::class)
     abstract fun bindViewModel(visitViewModel: VisitViewModel): ViewModel
 }
+
+

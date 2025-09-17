@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityRealisasiVisitPlanActualBinding
 package ahm.parts.ordering.ui.home.dealer.salesmanvisit.realisasivisit.planactual.koordinator
 
 import ahm.parts.ordering.R
@@ -13,8 +14,6 @@ import ahm.parts.ordering.ui.home.dealer.salesmanvisit.realisasivisit.planactual
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_realisasi_visit_plan_actual.*
-import kotlinx.android.synthetic.main.content_loading_list.*
 
 class PlanActualRealisasiKoordinatorActivity : BaseActivity<PlanActualRealiasiViewModel>(), View.OnClickListener {
 
@@ -29,7 +28,8 @@ class PlanActualRealisasiKoordinatorActivity : BaseActivity<PlanActualRealiasiVi
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_realisasi_visit_plan_actual)
+        binding = ActivityRealisasiVisitPlanActualBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         paramActualVisit = extra(Constants.BUNDLE.PARAM).getObject()
 
@@ -124,3 +124,6 @@ class PlanActualRealisasiKoordinatorActivity : BaseActivity<PlanActualRealiasiVi
     }
 
 }
+
+
+

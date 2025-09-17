@@ -223,3 +223,5 @@ open class NoViewModelActivity : DaggerAppCompatActivity() {
     }
 
 }
+
+

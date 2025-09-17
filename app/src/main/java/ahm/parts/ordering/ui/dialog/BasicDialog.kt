@@ -207,3 +207,6 @@ class BasicDialog : View.OnClickListener {
         fun clicked(dialog: BasicDialog)
     }
 }
+
+
+

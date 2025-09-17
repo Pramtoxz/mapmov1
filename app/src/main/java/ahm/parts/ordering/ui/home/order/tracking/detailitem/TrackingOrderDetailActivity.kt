@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityTrackingOrderDetailsBinding
 package ahm.parts.ordering.ui.home.order.tracking.detailitem
 
 import ahm.parts.ordering.R
@@ -13,7 +14,6 @@ import ahm.parts.ordering.ui.home.order.tracking.detailpengiriman.TrackingOrderP
 import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.widget.SearchView
-import kotlinx.android.synthetic.main.activity_tracking_order_details.*
 
 class TrackingOrderDetailActivity : BaseActivity<TrackingOrderViewModel>() {
 
@@ -26,7 +26,8 @@ class TrackingOrderDetailActivity : BaseActivity<TrackingOrderViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tracking_order_details)
+        binding = ActivityTrackingOrderDetailsBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         trackingOrder = extra(Constants.BUNDLE.JSON).getObject()
 
@@ -98,3 +99,6 @@ class TrackingOrderDetailActivity : BaseActivity<TrackingOrderViewModel>() {
     }
 
 }
+
+
+

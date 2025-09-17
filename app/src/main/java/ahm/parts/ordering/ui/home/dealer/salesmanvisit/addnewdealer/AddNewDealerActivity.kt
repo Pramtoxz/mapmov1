@@ -1,3 +1,5 @@
+private lateinit var binding: DialogBottomAlertForgotBinding
+private lateinit var binding: ActivityAddNewDealerBinding
 package ahm.parts.ordering.ui.home.dealer.salesmanvisit.addnewdealer
 
 import ahm.parts.ordering.R
@@ -30,7 +32,6 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.livinglifetechway.quickpermissions_kotlin.runWithPermissions
-import kotlinx.android.synthetic.main.activity_add_new_dealer.*
 import pl.aprilapps.easyphotopicker.DefaultCallback
 import pl.aprilapps.easyphotopicker.EasyImage
 import java.io.File
@@ -51,7 +52,8 @@ class AddNewDealerActivity : BaseActivity<AddNewDealerViewModel>(), View.OnClick
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_new_dealer)
+        binding = ActivityAddNewDealerBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -328,3 +330,6 @@ class AddNewDealerActivity : BaseActivity<AddNewDealerViewModel>(), View.OnClick
     }
 
 }
+
+
+

@@ -188,3 +188,5 @@ class LocationLiveData private constructor() : LiveData<Location>() {
         onInactive()
     }
 }
+
+

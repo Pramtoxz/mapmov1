@@ -13,3 +13,5 @@ abstract class TipeMotorSearchModule {
     @ViewModelKey(TipeMotorSearchViewModel::class)
     abstract fun bindViewModel(tipeMotorSearchViewModelViewModel: TipeMotorSearchViewModel): ViewModel
 }
+
+

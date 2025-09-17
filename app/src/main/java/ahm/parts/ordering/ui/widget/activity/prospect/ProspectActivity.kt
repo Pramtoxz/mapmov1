@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityProspectBinding
 package ahm.parts.ordering.ui.widget.activity.prospect
 
 import ahm.parts.ordering.R
@@ -11,7 +12,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.widget.SearchView
-import kotlinx.android.synthetic.main.activity_prospect.*
 
 class ProspectActivity : BaseActivity<ProspectViewModel>() {
 
@@ -25,7 +25,8 @@ class ProspectActivity : BaseActivity<ProspectViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_prospect)
+        binding = ActivityProspectBinding.inflate(layoutInflater)
+    setContentView(binding.root)
         setToolbar(getString(R.string.sales_lbl_prospek), true)
 
         populateData()
@@ -85,3 +86,6 @@ class ProspectActivity : BaseActivity<ProspectViewModel>() {
         return super.onOptionsItemSelected(item)
     }
 }
+
+
+

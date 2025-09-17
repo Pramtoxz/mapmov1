@@ -101,3 +101,5 @@ data class VisitEfektivitas(
     @SerializedName("realisasi_persentase")
     var realisasiPersentase: String = ""
 )
+
+

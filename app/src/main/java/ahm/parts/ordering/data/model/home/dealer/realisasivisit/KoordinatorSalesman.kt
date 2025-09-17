@@ -16,3 +16,5 @@ data class KoordinatorSalesman(
     var updatedAt: String = "",
     var selectedKoordinator : Boolean = false
 )
+
+

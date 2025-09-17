@@ -5,3 +5,5 @@ import androidx.core.content.FileProvider
 
 @SuppressLint("Registered")
 class GenericFileProvider: FileProvider()
+
+

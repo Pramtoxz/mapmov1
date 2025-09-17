@@ -1,3 +1,4 @@
+private lateinit var binding: ActivitySkemaPembelianBinding
 package ahm.parts.ordering.ui.home.home.partnumber.cart.skemapembelian
 
 import ahm.parts.ordering.R
@@ -19,8 +20,6 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_skema_pembelian.*
-import kotlinx.android.synthetic.main.item_skema_pembelian.view.*
 
 class SkemaPembelianActivity : BaseActivity<SkemaPembelianViewModel>(), View.OnClickListener {
 
@@ -33,7 +32,8 @@ class SkemaPembelianActivity : BaseActivity<SkemaPembelianViewModel>(), View.OnC
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_skema_pembelian)
+        binding = ActivitySkemaPembelianBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         kodeDealer = extra(Constants.BUNDLE.ORDERSUGESTION.JSON_DEALER).getObject()
         cart = extra(Constants.BUNDLE.PARTSEARCH.JSON_CART).getObject()
@@ -170,3 +170,5 @@ class SkemaPembelianActivity : BaseActivity<SkemaPembelianViewModel>(), View.OnC
     }
 
 }
+
+

@@ -1,3 +1,5 @@
+private var _binding:  = null
+private val binding get() = _binding!!
 package ahm.parts.ordering.ui.home.catalogue
 
 import android.os.Bundle
@@ -16,8 +18,6 @@ import ahm.parts.ordering.ui.home.catalogue.detail_file.file_parent.CatalogueFil
 import ahm.parts.ordering.ui.home.catalogue.part_catalogue.PartCatalogueActivity
 import android.view.*
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.fragment_catalogue_parts.*
-import kotlinx.android.synthetic.main.item_catalogue_list.view.*
 
 class  CatalogueFragment : BaseFragment<HomeViewModel>(), View.OnClickListener {
 
@@ -34,7 +34,8 @@ class  CatalogueFragment : BaseFragment<HomeViewModel>(), View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_catalogue_parts, container, false)
+        return _binding = FragmentCataloguePartsBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -127,3 +128,11 @@ class  CatalogueFragment : BaseFragment<HomeViewModel>(), View.OnClickListener {
         fun newInstance() = CatalogueFragment()
     }
 }
+
+
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }

@@ -806,3 +806,5 @@ class CoordinatorSelectedAdapter constructor(
     }
 
 }
+
+

@@ -13,3 +13,5 @@ abstract class CheckStockFilterModule {
     @ViewModelKey(CheckStockViewModel::class)
     abstract fun bindViewModel(checkStockViewModel: CheckStockViewModel): ViewModel
 }
+
+

@@ -13,3 +13,5 @@ abstract class NotificationModule {
     @ViewModelKey(NotificationViewModel::class)
     abstract fun bindViewModel(notificationViewModel: NotificationViewModel): ViewModel
 }
+
+

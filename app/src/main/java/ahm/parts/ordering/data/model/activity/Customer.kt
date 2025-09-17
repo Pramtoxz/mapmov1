@@ -36,3 +36,5 @@ data class Customer(
         return "$name,$ktp"
     }
 }
+
+

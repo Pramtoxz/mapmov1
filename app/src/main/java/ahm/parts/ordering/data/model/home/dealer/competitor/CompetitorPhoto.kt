@@ -13,3 +13,5 @@ class CompetitorPhoto {
         this.base64Encode = base64Encode
     }
 }
+
+

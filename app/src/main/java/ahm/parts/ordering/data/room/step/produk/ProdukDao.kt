@@ -17,3 +17,5 @@ interface ProdukDao {
     @Query("SELECT * from produk WHERE idUser = 1 LIMIT 1")
     fun getProduk(): LiveData<Produk?>
 }
+
+

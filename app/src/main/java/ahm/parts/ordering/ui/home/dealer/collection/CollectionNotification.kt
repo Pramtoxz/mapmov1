@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityCollectionNotificationBinding
 package ahm.parts.ordering.ui.home.dealer.collection
 
 import ahm.parts.ordering.R
@@ -7,7 +8,6 @@ import ahm.parts.ordering.helper.extra
 import ahm.parts.ordering.ui.base.BaseActivity
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_collection_notification.*
 
 class CollectionNotification : BaseActivity<CollectionViewModel>(), View.OnClickListener {
     lateinit var collection : Collection1
@@ -16,7 +16,8 @@ class CollectionNotification : BaseActivity<CollectionViewModel>(), View.OnClick
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_collection_notification)
+        binding = ActivityCollectionNotificationBinding.inflate(layoutInflater)
+    setContentView(binding.root)
         setToolbar(getString(R.string.lbl_title_collection_notification), true)
         notrans = extra(Constants.BUNDLE.NOTRANSAKSI)
         totb = extra(Constants.BUNDLE.TOTALBAYAR)
@@ -34,3 +35,5 @@ class CollectionNotification : BaseActivity<CollectionViewModel>(), View.OnClick
 
     }
 }
+
+

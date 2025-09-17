@@ -48,3 +48,5 @@ data class InfoProspek(
     @SerializedName("pref_uji_perjalanan")
     val prefUjiPerjalanan: String? = null
 )
+
+

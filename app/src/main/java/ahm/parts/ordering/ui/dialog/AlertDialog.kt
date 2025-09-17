@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.annotation.StringRes
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import kotlinx.android.synthetic.main.dialog_bottom_alert.*
 
 /**
  * Created by nuryazid on 4/20/18.
@@ -81,3 +80,6 @@ class AlertDialog(context: Context) {
         return dialog as BottomSheetDialog
     }
 }
+
+
+

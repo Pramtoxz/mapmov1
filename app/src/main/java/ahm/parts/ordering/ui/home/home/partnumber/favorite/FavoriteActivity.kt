@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityFavoritePartNumberBinding
 package ahm.parts.ordering.ui.home.home.partnumber.favorite
 
 import ahm.parts.ordering.R
@@ -18,8 +19,6 @@ import android.util.Log
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_favorite_part_number.*
-import kotlinx.android.synthetic.main.item_favorite_part_number.view.*
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -33,7 +32,8 @@ class FavoriteActivity : BaseActivity<FavoriteViewModel>(), View.OnClickListener
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_favorite_part_number)
+        binding = ActivityFavoritePartNumberBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         kodeDealer = extra(Constants.BUNDLE.PARTSEARCH.JSON_DEALER).getObject()
 
@@ -188,4 +188,7 @@ class FavoriteActivity : BaseActivity<FavoriteViewModel>(), View.OnClickListener
     }
 
 }
+
+
+
 

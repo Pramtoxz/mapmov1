@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityKreditLimitDetailListBinding
 package ahm.parts.ordering.ui.home.dealer.kreditlimit.detail.kreditlimit
 
 import ahm.parts.ordering.R
@@ -10,7 +11,6 @@ import ahm.parts.ordering.ui.home.dealer.kreditlimit.adapter.KreditLimitDetailLi
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_kredit_limit_detail_list.*
 
 class KreditLimitListDetailActivity : BaseActivity<KreditLimitViewModel>(), View.OnClickListener {
 
@@ -21,7 +21,8 @@ class KreditLimitListDetailActivity : BaseActivity<KreditLimitViewModel>(), View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kredit_limit_detail_list)
+        binding = ActivityKreditLimitDetailListBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         dealerKredit = extra(Constants.BUNDLE.KODEDEALER)
 
@@ -79,3 +80,6 @@ class KreditLimitListDetailActivity : BaseActivity<KreditLimitViewModel>(), View
     }
 
 }
+
+
+

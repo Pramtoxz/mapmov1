@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityCollectionAddMultipleBinding
 package ahm.parts.ordering.ui.home.dealer.collection.add
 
 import ahm.parts.ordering.R
@@ -18,10 +19,6 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_collection.*
-import kotlinx.android.synthetic.main.activity_collection_add_multiple.*
-import kotlinx.android.synthetic.main.activity_collection_notification.*
-import kotlinx.android.synthetic.main.item_collection_list.view.*
 import org.json.JSONArray
 import org.json.JSONObject
 import pl.aprilapps.easyphotopicker.*
@@ -42,7 +39,8 @@ class CollectionAddMultipleActivity : BaseActivity<CollectionViewModel>(), View.
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_collection_add_multiple)
+        binding = ActivityCollectionAddMultipleBinding.inflate(layoutInflater)
+    setContentView(binding.root)
         initUI()
         initListener()
         //observeData()
@@ -238,3 +236,6 @@ class CollectionAddMultipleActivity : BaseActivity<CollectionViewModel>(), View.
 
 
 }
+
+
+

@@ -60,3 +60,5 @@ class ActivitySalesAdapter constructor(
     }
 
 }
+
+

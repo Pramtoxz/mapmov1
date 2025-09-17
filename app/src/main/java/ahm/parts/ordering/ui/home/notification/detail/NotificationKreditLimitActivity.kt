@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityNotificationKreditLimitBinding
 package ahm.parts.ordering.ui.home.notification.detail
 
 import ahm.parts.ordering.R
@@ -10,7 +11,8 @@ class NotificationKreditLimitActivity : BaseActivity<HomeViewModel>(), View.OnCl
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_notification_kredit_limit)
+        binding = ActivityNotificationKreditLimitBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -32,3 +34,6 @@ class NotificationKreditLimitActivity : BaseActivity<HomeViewModel>(), View.OnCl
     }
 
 }
+
+
+

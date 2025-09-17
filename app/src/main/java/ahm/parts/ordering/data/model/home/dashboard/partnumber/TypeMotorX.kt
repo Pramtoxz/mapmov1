@@ -10,3 +10,5 @@ data class TypeMotorX(
     @Expose
     var typeMotor: String = ""
 )
+
+

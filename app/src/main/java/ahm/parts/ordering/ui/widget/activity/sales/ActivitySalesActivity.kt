@@ -1,3 +1,4 @@
+private lateinit var binding: ActivitySalesActivityBinding
 package ahm.parts.ordering.ui.widget.activity.sales
 
 import ahm.parts.ordering.R
@@ -8,7 +9,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.widget.SearchView
-import kotlinx.android.synthetic.main.activity_sales_activity.*
 
 class ActivitySalesActivity : BaseActivity<ActivitySalesViewModel>() {
 
@@ -20,7 +20,8 @@ class ActivitySalesActivity : BaseActivity<ActivitySalesViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sales_activity)
+        binding = ActivitySalesActivityBinding.inflate(layoutInflater)
+    setContentView(binding.root)
         setToolbar(getString(R.string.toolbar_sales), true)
 
         populateData()
@@ -79,3 +80,6 @@ class ActivitySalesActivity : BaseActivity<ActivitySalesViewModel>() {
         return super.onOptionsItemSelected(item)
     }
 }
+
+
+

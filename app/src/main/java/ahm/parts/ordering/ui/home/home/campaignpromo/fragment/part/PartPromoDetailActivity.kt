@@ -1,3 +1,5 @@
+private lateinit var binding: DialogBottomPartPromoBinding
+private lateinit var binding: ActivityPartPromoDetailBinding
 package ahm.parts.ordering.ui.home.home.campaignpromo.fragment.part
 
 import ahm.parts.ordering.R
@@ -12,8 +14,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_part_promo_detail.*
-import kotlinx.android.synthetic.main.item_type_motor_part_detail.view.*
 import java.util.ArrayList
 
 class PartPromoDetailActivity : BaseActivity<HomeViewModel>(), View.OnClickListener {
@@ -24,7 +24,8 @@ class PartPromoDetailActivity : BaseActivity<HomeViewModel>(), View.OnClickListe
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_part_promo_detail)
+        binding = ActivityPartPromoDetailBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         initUI()
         initListener()
@@ -87,3 +88,6 @@ class PartPromoDetailActivity : BaseActivity<HomeViewModel>(), View.OnClickListe
 
 
 }
+
+
+

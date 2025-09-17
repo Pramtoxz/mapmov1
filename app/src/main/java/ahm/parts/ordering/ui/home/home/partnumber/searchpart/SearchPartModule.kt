@@ -13,3 +13,5 @@ abstract class SearchPartModule {
     @ViewModelKey(SearchPartViewModel::class)
     abstract fun bindViewModel(searchPartViewModel: SearchPartViewModel): ViewModel
 }
+
+

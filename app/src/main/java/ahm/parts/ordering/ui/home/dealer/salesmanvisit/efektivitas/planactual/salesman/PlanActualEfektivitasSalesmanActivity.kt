@@ -1,3 +1,4 @@
+private lateinit var binding: ActivityEfektivitasVisitPlanActualBinding
 package ahm.parts.ordering.ui.home.dealer.salesmanvisit.efektivitas.planactual.salesman
 
 import ahm.parts.ordering.R
@@ -13,8 +14,6 @@ import ahm.parts.ordering.ui.home.dealer.salesmanvisit.efektivitas.planactual.de
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_efektivitas_visit_plan_actual.*
-import kotlinx.android.synthetic.main.content_loading_list.*
 
 class PlanActualEfektivitasSalesmanActivity : BaseActivity<EfektivitasViewModel>(), View.OnClickListener {
 
@@ -29,7 +28,8 @@ class PlanActualEfektivitasSalesmanActivity : BaseActivity<EfektivitasViewModel>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_efektivitas_visit_plan_actual)
+        binding = ActivityEfektivitasVisitPlanActualBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         efektivitasParam = extra(Constants.BUNDLE.PARAM).getObject()
 
@@ -122,3 +122,6 @@ class PlanActualEfektivitasSalesmanActivity : BaseActivity<EfektivitasViewModel>
     }
 
 }
+
+
+

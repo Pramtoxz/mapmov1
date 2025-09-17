@@ -1,3 +1,4 @@
+private lateinit var binding: ActivitySuggestOrderBinding
 package ahm.parts.ordering.ui.home.home.partnumber.cart.suggestorder
 
 import ahm.parts.ordering.R
@@ -16,9 +17,6 @@ import android.view.Menu
 import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.activity_suggest_order.*
-import kotlinx.android.synthetic.main.bottom_sheet_order_sugestion.*
-import kotlinx.android.synthetic.main.item_order_sugestion.view.*
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -35,7 +33,8 @@ class SuggestOrderActivity : BaseActivity<CartViewModel>(), View.OnClickListener
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_suggest_order)
+        binding = ActivitySuggestOrderBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
         kodeDealer = extra(Constants.BUNDLE.PARTSEARCH.JSON_DEALER).getObject()
 
@@ -226,3 +225,6 @@ class SuggestOrderActivity : BaseActivity<CartViewModel>(), View.OnClickListener
 //                this.isChecked = !this.isChecked
 //                suggestAdapter.notifyDataSetChanged()
 //            })
+
+
+
